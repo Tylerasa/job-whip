@@ -10,7 +10,11 @@ const Details = ({ country }) => {
           <h1 style={{ display: "inline-block", marginRight: "5px" }}>
             {country[0].name.official}
           </h1>
-          <img src={country[0].flags.png} width="20px" />
+          <img
+            src={country[0].flags.png}
+            width="20px"
+            alt={country[0].name.common}
+          />
         </div>
         <p>Common Name: {country[0].name.common}</p>
         <p>Capital: {country[0].capital ? country[0].capital[0] : "N/A"}</p>
