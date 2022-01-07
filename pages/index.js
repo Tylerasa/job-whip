@@ -1,12 +1,14 @@
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import { useSelector } from "react-redux";
+import { useEffect } from "react";
 export default function Home() {
   const value = useSelector((state) => state.floater.value);
   if (value) {
-    document.body.style.backgroundColor = "#111";
+    document.body.style.background = "#111";
     document.body.style.color = "white";
-  } else {
+  }
+   else {
     document.body.style.backgroundColor = "#f2f2f2";
   }
   return (

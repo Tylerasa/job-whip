@@ -7,6 +7,11 @@ const Floater = () => {
   const value = useSelector((state) => state.floater.value);
   const handleClick = () => {
     dispatch(toggle());
+    document.body.style.background = "#111";
+    document.body.style.color = "white";
+    if(value) {
+      document.body.style.backgroundColor = "#f2f2f2";
+    }
   };
   return (
     <div
