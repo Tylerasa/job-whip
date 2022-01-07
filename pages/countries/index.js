@@ -3,7 +3,7 @@ import React from "react";
 import styles from "../../styles/Countries.module.css";
 import { useSelector } from "react-redux";
 
-const index = ({ countries }) => {
+const CountryIndex = ({ countries }) => {
   const value = useSelector((state) => state.floater.value);
 
   return (
@@ -33,7 +33,7 @@ const index = ({ countries }) => {
   );
 };
 
-export default index;
+export default CountryIndex;
 
 export const getStaticProps = async () => {
   const res = await fetch("https://restcountries.com/v3.1/all");
