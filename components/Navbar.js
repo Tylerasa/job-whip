@@ -1,19 +1,39 @@
 import React from "react";
 import Link from "next/link";
+import { useSelector } from "react-redux";
+
 const Navbar = () => {
+  const value = useSelector((state) => state.floater.value);
+
   return (
     <nav>
-      <div className="logo">
-        {/* <h1>Explorer</h1> */}
-      </div>
+      <div className="logo">{/* <h1>Explorer</h1> */}</div>
       <Link href="/">
-        <a>Home</a>
+        <a
+          style={{
+            color: value ? "white" : "black",
+          }}
+        >
+          Home
+        </a>
       </Link>
       <Link href="/about">
-        <a>About</a>
+        <a
+          style={{
+            color: value ? "white" : "black",
+          }}
+        >
+          About
+        </a>
       </Link>
       <Link href="/countries">
-        <a>Countries</a>
+        <a
+          style={{
+            color: value ? "white" : "black",
+          }}
+        >
+          Countries
+        </a>
       </Link>
     </nav>
   );
