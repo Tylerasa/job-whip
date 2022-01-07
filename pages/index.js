@@ -1,16 +1,8 @@
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import { useSelector } from "react-redux";
-import { useEffect } from "react";
 export default function Home() {
   const value = useSelector((state) => state.floater.value);
-  if (value) {
-    document.body.style.background = "#111";
-    document.body.style.color = "white";
-  }
-   else {
-    document.body.style.backgroundColor = "#f2f2f2";
-  }
   return (
     <div className={styles.container}>
       <h1 id="header" className={styles.title}>
@@ -32,7 +24,8 @@ export default function Home() {
         <a
           id="button"
           style={{
-            backgroundColor: value ? "white" : "4979ff",
+            backgroundColor: value ? "white" : "#111",
+            color: value ? "#777" : "white",
           }}
           className={styles.btn}
         >
